@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belajar bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mantra&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mantra&display=swap" rel="stylesheet">
+
+
+  <style>
+    html {
+      scroll-behavior: smooth; /* Transisi scroll yang halus */
+    }
+    body {
+      padding-top: 20px; /* Sesuaikan padding ini dengan tinggi navbar */
+    }
+    .card img {
+  width: 100%; /* Make the image cover the full width of the card */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures the image fills the container without stretching */
+  border-radius: 10px; /* Optional: adds rounded corners to the images */
+}
+
+
+    .navbar {
+  /* Remove position: relative; */
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(160, 160, 160, 0.3);
+  z-index: 100;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+  background: linear-gradient(
+    to right,
+    rgba(201, 145, 180, 0.8),
+    rgba(177, 44, 144, 0.4),
+    rgba(179, 68, 110, 0.8)
+  );
+}
+/* Styling for the Experience section */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+}
+@font-face {
+  font-family: 'Broklyn';
+  src: url('fonts/Broklyn.ttf') format('truetype');
+}
+
+
+.pengalaman {
+      font-family: 'Broklyn', sans-serif;
+      font-weight: bold;
+      font-size: 45px;
+      color: #fff;
+      background: linear-gradient(to right, #aa9c99, #7c5776); /* Gradient text color */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .pengalaman:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+.card-text {
+  font-family: 'Fira Code', monospace;
+  font-size: 0px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.pengalaman{
+  font-family: 'Montserrat', sans-serif;
+}
+    .daspro {
+      max-width: 100%;
+      height: auto;
+      margin-left: 100px;
+    }
+
+    @font-face {
+      font-family: 'Mokoto';
+      src: url('fonts/Mokoto.woff2') format('woff2'),
+           url('fonts/Mokoto.woff') format('woff');
+    }
+
+    .navbar-nav .nav-link {
+      font-family: 'Fira Code', monospace;
+      font-weight: 70;
+      font-size: 18px;
+    }
+
+    .card {
+      overflow: hidden;
+      border-radius: 35px;
+      padding: 15px;
+      background: linear-gradient(
+        to right,
+        rgba(197, 197, 197, 0.6),
+        rgba(128, 0, 128, 0.5),
+        rgba(195, 192, 197, 0.6)
+      );
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.07);
+      box-shadow: 0 8px 34px rgba(255, 255, 255, 0.5);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 3px solid rgba(255, 255, 255, 0.5);
+      border-radius: 35px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .highlight-text{
+      font-family: 'Montserrat', sans-serif;
+      margin-left: 11px;
+      text-align: justify;
+    }
+    .cardin{
+      margin-top: 30px;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .card-video {
+      border-radius: 35px;
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+
+    .brand-name {
+      font-family: 'Audiowide', sans-serif;
+      font-size: 30px;
+      color: purple;
+      font-weight: bold;
+      margin-left: -20px;
+      margin-top: -5px;
+      display: inline-block;
+    }
+
+    .tagline {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 12px;
+      margin-left: 2px;
+      margin-top: -10px;
+      color: #303030;
+    }
+
+    .lobster-regular {
+      font-family: 'Lobster', cursive;
+      margin-top: 20px;
+    }
+
+    /* Animasi slide-in */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Mulai dari kiri luar layar */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Pindah ke posisi semula */
+    opacity: 1;
+  }
+}
+
+/* Gunakan animasi ini pada elemen yang ingin slide-in */
+.slide-in {
+  animation: slideIn 1s ease-out;
+  visibility: visible;
+}
+
+    .btn {
+      margin-right: 10px;
+    }
+
+    .highlight-text {
+      color: white;
+    }
+
+    .card-text {
+      font-family: 'Exo 2', sans-serif;
+      text-align: justify;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .social-icons {
+      margin-left: 20px;
+    }
+
+    .social-icons a {
+      color: #303030;
+      font-size: 24px;
+      margin-right: 15px;
+    }
+
+    .social-icons a:hover {
+      color: purple;
+    }
+    @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animasi slide-in dari kanan */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Mulai dari posisi di luar kanan layar */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Gambar kembali ke posisi semula */
+    opacity: 1;
+  }
+}
+
+/* Gunakan animasi slide-in dari kanan pada elemen */
+.slide-in-right {
+  animation: slideInFromRight 1s ease-out forwards; /* 1 detik durasi animasi */
+}
+
+
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.card-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 3.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite 3.5s;
+}
+
+.card-title.finished-typing {
+  border-right: none; /* Menghilangkan kursor berkedip setelah animasi selesai */
+}
+
+    .btn-primary {
+      display: block;
+      margin: 0 auto;
+      background-color: #6200ea;
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background-color: #3700b3;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05) rotate(-1deg);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.09);
+      box-shadow: 0 8px 34px rgba(255, 255, 255, 0.5);
+    }
+    /* Kurangi jarak antara container pertama dan container "About Me" */
+.container {
+  margin-bottom: 10px; /* mengurangi margin antara container satu dengan yang lain */
+  justify-content: center;
+  
+}
+.nav-link {
+  color: black; /* Warna default teks dan ikon */
+  transition: color 0.3s ease;
+}
+
+
+
+/* Style gambar bulat dengan border menarik */
+/* Style gambar bulat dengan ukuran lebih kecil di bagian About Me */
+.porto {
+  width: 100%; /* Atur ukuran gambar sesuai keinginan */
+  height: 200px;
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  border: 8px solid transparent; /* Border dasar transparan */
+  background: linear-gradient(white, white), 
+              linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,113,1) 35%, rgba(0,212,255,1) 100%); /* Gradien warna */
+  background-clip: padding-box, border-box; /* Memisahkan gambar dengan border */
+  background-origin: border-box; /* Agar gradien muncul di border */
+  padding: 5px; /* Spasi antara gambar dan border */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Efek cahaya */
+  display: block;
+  margin-top: 30px; /* Agar berada di tengah */
+  margin-left: 230px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Menjaga gambar tetap proporsional */
+  border-radius: 50%; /* Memastikan gambar tetap bulat */
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body id="Home">
+  <video class="background-video" autoplay loop muted>
+    <source src="last.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <img class="logo" src="SAN (3).png" alt="Logo" />
+      <div class="brand-name">
+        SAN.I
+        <div class="tagline">Unlocking Tomorrow</div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px">
+          <li class="nav-item active">
+            <a class="nav-link" href="#Home"><i class="fas fa-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-me"><i class="fas fa-user-tie"></i> About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services"><i class="fas fa-briefcase"></i> Experience</a>
+          </li>
+          
+             
+        <div class="social-icons">
+          <a href="https://www.instagram.com/jossyesitanggang" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/San Jossye" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/San Jossye" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </nav>
+  </section>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col align-self-center" >
+        <h1 class="lobster-regular">
+       <br />
+        
+        </h1>
+       
+      </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col align-self-center" >
+          <h1 class="lobster-regular slide-in" style="color: #a17e9b;; text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.5);">
+            Haii!!<br />
+            Welcome to the Future 
+          </h1>
+          
+          <p class="mt-4 mb-5 highlight-text slide-in" >
+            <u><b>Technology</b></u> Embrace the wave of technological advancements with an open mind! Change can be daunting, but it also brings incredible opportunities for growth and innovation. Instead of feeling overwhelmed, let's adapt and evolve with the new technologies around us. </p>
+          <p class="mt-4 mb-5 highlight-text slide-in">Remember, every challenge we face is a chance to learn and improve. Together, we can harness these advancements to create a brighter future. Stay curious, stay motivated, and never stop believing in your potential!"</p>
+        </div>
+
+        <div class="col slide-in-right">
+          <img src="y2k.png" class="daspro" alt="" width="100%" />
+        </div>
+      </div>
+      <div class="container container-about" id="about-me" style="margin-top: -70px;" > <!-- tambahkan margin-top -->
+
+        <div class="row">
+          <div class="col align-self-center">
+            <h1 class="lobster-regular">
+             <br />
+            </h1>
+          
+      <div class="container container-about"  > <!-- tambahkan margin-top -->
+
+        <div class="row">
+          <div class="col align-self-center">
+            <h1 class="lobster-regular">
+             <br />
+            </h1>
+          
+        
+        <div class="row">
+          <div class="col align-self-center">
+            <h1 class="lobster-regular slide-in" style="color: #a17e9b;; text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.5);">
+              About me..<br />
+            </h1>
+            <p class="mt-4 mb-5 highlight-text slide-in">
+          Saya adalah mahasiswa di <b>Universitas Sumatera Utara</b> dengan program studi <b>Teknologi Informasi.</b> Sebelumnya, saya adalah lulusan dari SMK dengan jurusan <b>Teknologi Jaringan Komputer dan Telekomunikasi (TJKT), </b> memberikan saya dasar yang kuat dalam teknologi dan jaringan.
+            </p>
+            <p class="mt-4 mb-5 highlight-text slide-in">
+              Dengan pengalaman yang mendalam di bidang jaringan, saya telah terlibat dalam berbagai proyek yang memperkuat keterampilan teknis saya, termasuk instalasi dan pemeliharaan infrastruktur jaringan.
+            </p>
+          </div>
+      
+          <div class="col slide-in-right">
+            <img src="porto.jfif" class="porto" alt="" width="100%" />
+          </div>
+        </div>
+      </div>
+
+      <div id="services" class="cardin">
+        <div class="col-12 text-center mb-5"> <!-- Tambahkan elemen heading untuk "Services" -->
+          <h2 style="font-family: 'Montserrat', sans-serif; color: white;"></h2>
+        </div>
+       <div class="row mt-4" >
+        <div class="col-12 text-center mb-5"> <!-- Tambahkan elemen heading untuk "Services" -->
+          <h2 style="font-family: 'Montserrat', sans-serif; color: white;"></h2>
+        </div>
+      
+
+      <div class="row mt-4" >
+        <div class="col-12 text-center mb-5" > <!-- Tambahkan elemen heading untuk "Services" -->
+          <h2 class="pengalaman">Experience</h2>
+        </div>
+      
+
+      <div class="row mt-4" >
+        <div class="col-md-4 col-12 mb-4">
+          <div class="card">
+           <img src="experience.jpg" alt="gambar1">
+            <div class="card-body">
+              <h5 class="card-title">Konfigurasi Virtual </h5>
+              <p class="card-text " style="font-size: 14px;">
+                Saya memiliki pengalaman dalam remote configuration Optical Network Unit (ONU), yang memungkinkan saya untuk mengelola setting jaringan seperti VLAN, DHCP, dan IP address tanpa perlu intervensi fisik. Kemampuan ini memungkinkan saya untuk memberikan solusi yang cepat dan efektif.
+              </p>
+              <a href="https://citraweb.com/artikel/558/" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-12 mb-4">
+          <div class="card">
+          <img src="experience1.jpg" alt="gambar2">
+            <div class="card-body">
+              <h5 class="card-title">Server Upkeep</h5>
+              <p class="card-text" style="font-size: 14px;">
+                Server Upkeep dalam konteks jaringan adalah proses strategis yang memastikan kinerja server tetap optimal dan aman. Ini mencakup pemantauan real-time terhadap resource seperti CPU dan bandwidth, penerapan security patches untuk melindungi dari ancaman.
+              </p>
+              <a href="https://kumparan.com/how-to-tekno/arti-maintenance-server-dan-cara-melakukannya-bagi-admin-21N1QNpZ72K" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-12 mb-4">
+          <div class="card">
+           <img src="experience3.jpg" alt="gambar3">
+            <div class="card-body">
+              <h5 class="card-title">Perawatan Infrastruktur</h5>
+              <p class="card-text" style="font-size: 14px;">
+                Perawatan Infrastruktur Jaringan adalah langkah krusial untuk memastikan keandalan dan performa optimal dari sistem jaringan. Saya fokus pada pemeliharaan komponen penting seperti Optical Distribution Point (ODP) dan Optical Drop Cable (ODC). dan perangkat infrakstruktur lainnya.
+              </p>
+              <a href="https://e-katalog.lkpp.go.id/katalog/produk/detail/77165438" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-4 col-12 mb-4">
+          <div class="card">
+           
+             <img src="experience6.jpg" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Narasumber</h5>
+              <p class="card-text" style="font-size: 14px;">
+                Sebagai narasumber di workshop MC, saya berbagi pengetahuan tentang teknik penguasaan panggung dan komunikasi efektif. Dalam acara tersebut, saya membahas pentingnya keterampilan interpersonal dan pengelolaan waktu, serta melibatkan peserta dalam praktik langsung.
+              </p>
+              <a href="https://kumparan.com/berita-update/narasumber-pengertian-jenis-syarat-dan-tugasnya-1xhInGO9Olb" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mb-4">
+          <div class="card">
+          <img src="experience7.png" alt="">
+            <div class="card-body">
+              <h5 class="card-title">FTTH (Fiber to the Home)</h5>
+                <p class="card-text" style="font-size: 14px;">
+                  Dalam perjalanan saya mendalami dunia FTTH (Fiber to the Home), saya telah memperoleh pemahaman yang mendalam tentang teknologi jaringan fiber optik dan implementasinya. Saya terlibat dalam berbagai proyek yang melibatkan perencanaan dan pemasangan.
+                </p>
+                <a href="hhttps://it.telkomuniversity.ac.id/ftth-adalah/" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4 col-12 mb-4">
+            <div class="card">
+              <img src="experience8.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Instalasi Mikrotik</h5>
+                <p class="card-text" style="font-size: 14px;">
+                  Saya mahir dalam instalasi Mikrotik, termasuk konfigurasi router dan troubleshooting untuk memperbaiki masalah koneksi. Selain itu, saya memiliki keahlian dalam blocking konten dan pengelolaan bandwidth untuk meningkatkan efisiensi jaringan.
+                </p>
+                <a href="https://www.sekawanmedia.co.id/blog/mikrotik-adalah/" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const cardTitles = document.querySelectorAll(".card-title");
+
+  cardTitles.forEach((title) => {
+    // Tambahkan kelas 'finished-typing' setelah animasi selesai untuk setiap card title
+    setTimeout(() => {
+      title.classList.add("finished-typing");
+    }, 3500); // Sesuaikan dengan durasi animasi typing (3.5 detik)
+  });
+});
+
+    </script>
+    
+  </body>
+</html>
